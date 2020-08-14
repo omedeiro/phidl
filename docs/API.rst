@@ -419,6 +419,15 @@ LayerSet
    :show-inheritance:
 
 
+Path
+====
+
+.. autoclass:: phidl.device_layout.Path
+   :members:
+   :inherited-members:
+   :show-inheritance:
+
+
 Polygon
 =======
 
@@ -432,6 +441,15 @@ Port
 ====
 
 .. autoclass:: phidl.device_layout.Port
+   :members:
+   :inherited-members:
+   :show-inheritance:
+
+
+Xsection
+========
+
+.. autoclass:: phidl.device_layout.Xsection
    :members:
    :inherited-members:
    :show-inheritance:

@@ -119,8 +119,8 @@ elif args[1] == 'add':
     fwrite = args[2]
     args = args[3:]
 elif args[1] == 'build':
-    os.chdir(dirname(source_path))
-    os.system("sphinx-build -b html source build")
+    os.chdir(source_path)
+    os.system("sphinx-build . build")
     sys.exit()
 else: raise ValueError('First input argument must be a .rst file, '
                        '"add", or "build".')
@@ -128,7 +128,7 @@ else: raise ValueError('First input argument must be a .rst file, '
 # Determining necessary paths
 py_path = input('Name of the project subfolder containing the package '
                 'Python files: ')
-main_path = join(dirname(dirname(source_path)), py_path)
+main_path = join(dirname(source_path), py_path)
 if exists(join(main_path, args[0])): pass
 else: raise ValueError('Python subfolder path is not valid.')
 
@@ -142,8 +142,8 @@ for i in range(len(args) ):
 
 # pip uninstall phidl
 # pip install git+https://github.com/amccaugh/phidl.git@docs
-os.chdir(dirname(source_path))
-os.system("sphinx-build -b html source build")
+os.chdir(source_path)
+os.system("sphinx-build . build")
 
 # cd E:\Documents\GitHub\phidl\docs\source
 # python gen_API.py API.rst geometry.py device_layout.py
