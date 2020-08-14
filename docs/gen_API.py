@@ -120,7 +120,7 @@ elif args[1] == 'add':
     args = args[3:]
 elif args[1] == 'build':
     os.chdir(source_path)
-    os.system("sphinx-build . build")
+    os.system("sphinx-build . _build")
     sys.exit()
 else: raise ValueError('First input argument must be a .rst file, '
                        '"add", or "build".')
@@ -143,7 +143,7 @@ for i in range(len(args) ):
 # pip uninstall phidl
 # pip install git+https://github.com/amccaugh/phidl.git@docs
 os.chdir(source_path)
-os.system("sphinx-build . build")
+os.system("sphinx-build . _build")
 
 # cd E:\Documents\GitHub\phidl\docs\source
 # python gen_API.py API.rst geometry.py device_layout.py
